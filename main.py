@@ -62,13 +62,10 @@ def main_game():
     player_cards = []
     computer_cards = []
 
-    # Deal two cards to the player
-    player_cards.append(deal_card())
-    player_cards.append(deal_card())
-
-    # Deal two cards to the dealer(computer)
-    computer_cards.append(deal_card())
-    computer_cards.append(deal_card())
+    # Deals two cards to the player and the computer
+    for _ in range(2):
+        player_cards.append(deal_card())
+        computer_cards.append(deal_card())
 
     # Calculates the score of both player and computer
     player_score = calculate_score(player_cards)
