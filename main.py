@@ -104,12 +104,17 @@ def main_game():
     print("Computer score: " + str(computer_score))
     compare(player_score, computer_score)
 
-    replay = input("Want to play again?(y/n): ")
-    if replay == 'y':
-        print('\n\n\n\n\n\n\n\n\n\n')
-        main_game()
-    else:
-        print("Goodbye")
+    while True:
+        replay = input("Want to play again?(y/n): ")
+        if replay == 'y':
+            print('\n\n\n\n\n\n\n\n\n\n')
+            main_game()
+        elif replay == 'n':
+            print("Goodbye")
+            break
+        else:
+            print("Invalid input")
+            continue
 
 main_game()
 
